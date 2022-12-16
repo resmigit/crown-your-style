@@ -6,7 +6,8 @@ import SignUpForm from '../../components/sign-upform/sign-up-form.component';
 /* import { useEffect } from 'react';
 import {getRedirectResult} from 'firebase/auth'; */
 import SignInForm from '../../components/sign-in-form/sign-in-form.component.jsx';
-import './authentication.styles.scss';
+import { AuthenticationContainer } from './authentication.styles';
+//import './authentication.styles.scss';
 
 const Authentication =() =>{   
     /* useEffect(()=>{
@@ -19,14 +20,18 @@ const Authentication =() =>{
                 },[]); */
 
     return(
-        <div className='authentication-container'>
-            {/* <h1>Sign in page</h1> */}
-              {/*  <button onClick={signInWithGoogleRedirect}>
-                Sign In With Google Redirect
-            </button> */}            
+        <AuthenticationContainer>         
             <SignInForm></SignInForm>
-            <SignUpForm></SignUpForm>    
-        </div>
+            <SignUpForm></SignUpForm> 
+        </AuthenticationContainer>   
+   /*     <div className='authentication-container'>
+           // <h1>Sign in page</h1> 
+             //  <button onClick={signInWithGoogleRedirect}>
+             //   Sign In With Google Redirect
+           // </button> 
+            <SignInForm></SignInForm>
+            <SignUpForm></SignUpForm> 
+        </div> */
     );
 }
 export default Authentication;
