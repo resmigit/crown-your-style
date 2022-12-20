@@ -19,7 +19,7 @@ export const UserProvider=({children})=>{
                  //console.log('inside useEffect doc creation');
             }
             setCurrentUser(user);
-            console.log(user);
+            //console.log(user);
         });
         return unsubscribe;
     },[]);
