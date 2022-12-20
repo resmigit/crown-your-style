@@ -1,4 +1,4 @@
-import { BaseButton,GoogleSignInButton,Inverted, InvertedButton } from './button.styles';
+import { BaseButton,GoogleSignInButton, InvertedButton } from './button.styles';
 //import './button.styles.scss';
 
 /* inverted
