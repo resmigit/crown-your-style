@@ -4,11 +4,12 @@ import Category from '../category/category.component';
 //import './shop.styles.scss';
 
 const Shop =()=>{
-    return( 
-         <Routes>
+    return(         
+        <Routes>
             <Route index element={<CategoriesPreview/>}></Route>
             <Route path=':category' element={<Category/>}></Route>
-        </Routes>
+         </Routes>
+        
         )
 }
 export default Shop;
