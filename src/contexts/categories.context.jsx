@@ -1,5 +1,5 @@
-import { createContext,useState,useEffect } from "react";
-import {getCategoriesAndDocuments} from '../utils/firebase/firebase.utils';
+/* import { createContext,useState,useEffect } from "react";
+import {getCategoriesAndDocuments} from '../utils/firebase/firebase.utils'; */
 //import { addCollectionAndDocuments } from "../utils/firebase/firebase.utils.js";
 //import PRODUCTS from '../shop-data.json';
 //import SHOP_DATA from '../shop-data.js';
@@ -8,7 +8,7 @@ import {getCategoriesAndDocuments} from '../utils/firebase/firebase.utils';
 /* export const ProductsContext= createContext({
     products:[]
 }); */
-export const CategoriesContext= createContext({
+/* export const CategoriesContext= createContext({
     categoriesMap:{}
 });
 export const CategoriesProvider =({children})=>{    
@@ -25,6 +25,7 @@ export const CategoriesProvider =({children})=>{
      const value = {categoriesMap};
      return (<CategoriesContext.Provider value={value}>{children}</CategoriesContext.Provider>);   
  }
+  */
 
 /* export const ProductsProvider =({children})=>{
    // const [products,setProducts] = useState(PRODUCTS);
@@ -41,4 +42,8 @@ export const CategoriesProvider =({children})=>{
     },[]); */   
    /* const value = {products};
     return (<CategoriesContext.Provider value={value}>{children}</CategoriesContext.Provider>);   
-} */
+} 
+*/
+
+
+
