@@ -7,7 +7,7 @@ import App from './App';
 //import {UserProvider} from './contexts/user.context';
 //import { ProductsProvider } from './contexts/products.context';
 // import {CategoriesProvider } from './contexts/categories.context';
-import { CartProvider } from './contexts/cart.context';
+//import { CartProvider } from './contexts/cart.context';
 import { store } from './store/store';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
@@ -19,9 +19,9 @@ root.render(
       <BrowserRouter>
         {/* <UserProvider> */}
          {/*  <CategoriesProvider> */}
-            <CartProvider>
+            {/* <CartProvider> */}
               <App/>
-            </CartProvider>          
+            {/* </CartProvider> */}          
           {/* </CategoriesProvider> */}      
         {/* </UserProvider> */}     
       </BrowserRouter> 
