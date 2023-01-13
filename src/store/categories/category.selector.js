@@ -16,7 +16,12 @@ export const selectCategoriesMap = createSelector(
                                             acc[title.toLowerCase()] = items;                                            
                                             return acc;
                                             },{})                                                                            
-                                    ) ;                                 
+                                    ) ;     
+                                    
+ export const selectCategoriesIsLoading = createSelector(
+                                        [selectCategoryReducer],
+                                        (categoriesSlice) => categoriesSlice.isLoading
+                                    )   ;                                
 
 //export const selectCategoriesMap =(state) =>state.categories.categoriesMap;
 /* export const selectCategoriesMap =(state) =>state.categories.categories
