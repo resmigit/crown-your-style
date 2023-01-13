@@ -44,6 +44,7 @@ export const addCollectionAndDocuments =async(collectionkey,objectsToAdd) =>{
 export const getCategoriesAndDocuments =async()=>{
     const collectionRef = collection(db,'categories');
     const q = query(collectionRef);
+    //await Promise.reject(new Error('new error woops'));
     const querySnapShot = await getDocs(q);
     return querySnapShot.docs.map(docSnapShot => docSnapShot.data());
    /*  const categoryMap = querySnapShot.docs.reduce((acc,docSnapShot)=>{
