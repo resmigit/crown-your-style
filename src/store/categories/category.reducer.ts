@@ -19,7 +19,7 @@ export const CATEGORIES_INITIAL_STATE : CategoriesState = {
     ,error : null
 }
 
-export const categoriesReducer =( state = CATEGORIES_INITIAL_STATE,action = {} as AnyAction)//CategoryAction) 
+export const categoriesReducer =( state = CATEGORIES_INITIAL_STATE,action : AnyAction)//= {} as AnyAction)//CategoryAction) 
     :CategoriesState =>{
         if( fetchCategoriesStart.match(action)){
             return{
