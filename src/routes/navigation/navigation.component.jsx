@@ -9,7 +9,7 @@ import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component
 //import {UserContext} from '../../contexts/user.context';
 import { selectCurrentUser } from '../../store/user/user.selector';
 //import { CartContext } from '../../contexts/cart.context';
-import {selectIsCartOpen} from '../../store/cart/cart.selector.js';
+import {selectIsCartOpen} from '../../store/cart/cart.selector';
 //import {signOutUser } from '../../utils/firebase/firebase.utils';
 import {signOutStart} from '../../store/user/user.action';
 import {NavigationContainer,LogoContainer,NavLinks,NavLink} from './navigation.styles';
