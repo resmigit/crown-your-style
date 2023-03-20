@@ -9,8 +9,12 @@ import ProductCard from '../../components/product-card/product-card.component';
 import { CategoryContainer,CategoryTitle } from './category.styles';
 //import './category.styles.scss';
 
+type CategoryRouteParams = {
+     category : string;
+}
+
 const Category=()=>{
- const {category} = useParams();
+ const {category} = useParams<keyof CategoryRouteParams>() as CategoryRouteParams;
  //const {categoriesMap} = useContext(CategoriesContext);
  const categoriesMap = useSelector(selectCategoriesMap);
  const isLoading = useSelector(selectCategoriesIsLoading);
