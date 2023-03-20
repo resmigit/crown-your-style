@@ -11,8 +11,7 @@ export const PaymentFormContainer = styled.div`
   
    border-width :1px;
    border-color :darkgrey;
-   border-style: solid;
-  
+   border-style: solid; 
 
 `
 

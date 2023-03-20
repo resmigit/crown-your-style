@@ -1,5 +1,6 @@
-import {useState} from 'react';
+import {useState,FormEvent,ChangeEvent} from 'react';
 import { useDispatch } from 'react-redux';
+//import { AuthError,AuthErrorCodes} from 'firebase/auth';
 /* import { 
         //signInWithGooglePopup,
        // ,createUserDocumentFromAuth
@@ -9,6 +10,7 @@ import { SignUpContainer,ButtonsContainer } from './sign-in-form.styles';
 //import './sign-in-form.styles.scss';
 import Button,{Button_Type_Classes} from '../button/button.component';
 import {googleSignInStart,emailSignInStart} from '../../store/user/user.action';
+import { InstanceOf } from 'reselect/es/types';
 //import { UserContext } from '../../contexts/user.context';
 
 const defaultFormFields={    
@@ -33,7 +35,7 @@ const SignInForm = ()=>{
         dispatch(googleSignInStart()) ;
     }
 
-    const handleSubmit =async(event) =>{
+    const handleSubmit =async(event : FormEvent<HTMLFormElement>) =>{
         event.preventDefault();
     
         try{
@@ -44,9 +46,10 @@ const SignInForm = ()=>{
             resetFormFields();
         }
         catch(error){
-            switch(error.code)
+            console.log('user sign in failed',error)  ;   
+           /*  switch((error as AuthError).code)
                 {
-                    case 'auth/wrong-password':
+                    case AuthErrorCodes.INVALID_PASSWORD ://'auth/wrong-password':
                         alert('Incorrect password for email');
                         break;
                     case 'auth/user-not-found':
@@ -54,11 +57,11 @@ const SignInForm = ()=>{
                         break;
                     default:
                         console.log('Error occured '+ error) 
-                }                
+                }   */                         
         }    
        
     }
-    const handleChange = (event)=>{
+    const handleChange = (event : ChangeEvent<HTMLInputElement>)=>{
         const{name,value} = event.target;
         setFormFields({...formFields,[name]:value});
     }
@@ -72,7 +75,7 @@ const SignInForm = ()=>{
                 <FormInput label="Password" type='password' required onChange={handleChange}
                 name="password" value={password}></FormInput>
                 <ButtonsContainer>
-                    <Button type='submit'>Sign In</Button>
+                    <Button  type='submit'>Sign In</Button>
                     <Button type='button' buttonType={Button_Type_Classes.google} onClick={signInWithGoogle}>Google Sign in</Button>
                 </ButtonsContainer>
             </form>
