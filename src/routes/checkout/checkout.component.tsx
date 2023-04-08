@@ -1,5 +1,6 @@
 //import { useContext } from 'react';
 //import { CartContext } from '../../contexts/cart.context';
+import {memo} from 'react';
 import { useSelector } from 'react-redux';
 import { selectCartItems , selectCartTotal } from '../../store/cart/cart.selector';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
@@ -7,7 +8,7 @@ import { CheckoutContainer,CheckoutHeader,HeaderBlock,Total } from './checkout.s
 import PaymentForm from '../../components/payment-form/payment-form.component';
 //import './checkout.styles.scss';
 
-const Checkout =()=>{
+const Checkout = memo(()=>{
     //const {cartItems,cartTotal} = useContext(CartContext);
     const cartItems = useSelector(selectCartItems);
     const cartTotal = useSelector( selectCartTotal);
@@ -37,7 +38,7 @@ const Checkout =()=>{
             <PaymentForm></PaymentForm>                          
         </CheckoutContainer>
     );
-}
+});
 export default Checkout;
 
 /* const Checkout =()=>{
