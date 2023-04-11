@@ -6,6 +6,7 @@ import {Routes,Route} from 'react-router-dom';
   ,getCurrentUser} from './utils/firebase/firebase.utils'; */
 //import { CreateAction } from './utils/reducer/reducer.util';
 import { checkUserSession } from './store/user/user.action';
+import { GlobalStyle } from './global.styles';
 //import { setCurrentUser } from './store/user/user.action';
 import Spinner from './components/spinner/spinner.component';
 //import Home from "./routes/home/home.component";
@@ -20,6 +21,7 @@ const Authentication  = lazy(() => import('./routes/authentication/authenticatio
 const Navigation = lazy(() => import( './routes/navigation/navigation.component'));
 const Shop = lazy(() => import('./routes/shop/shop.component')) ;
 const Checkout = lazy(()=> import('./routes/checkout/checkout.component'));
+
 /* const Shop = () =>{
   return(
     <h1>I am the Shop Page</h1>
@@ -42,6 +44,7 @@ const App=()=> {
 },[]);
   return ( 
     <Suspense fallback = {<Spinner/>}>
+      <GlobalStyle/>
       <Routes>
       <Route path="/" element={<Navigation/>}>
         <Route index element={<Home/>}></Route>

@@ -12,7 +12,7 @@ import App from './App';
 // import {CategoriesProvider } from './contexts/categories.context';
 //import { CartProvider } from './contexts/cart.context';
 import { store , persistor } from './store/store';
-import './index.scss';
+//import './index.scss';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
